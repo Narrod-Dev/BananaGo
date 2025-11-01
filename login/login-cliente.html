@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BananaGo | Inicio de Sesión</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/login.css">
+    <title>Regístrate | BananaGo</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/"">
 </head>
 <body>
     <!-- 🟨 HEADER -->
     <header class="header">
         <div class="logo">
-            <img src="assets/img/bananago-logo.png" alt="Logo BananaGo">
-            <h1><span class="oculto">Login | </span><a href="index.html">BananaGo</a></h1>
+            <img src="../assets/img/bananago-logo.png" alt="Logo BananaGo">
+            <h1><span class="oculto">Login | </span><a href="../index.html">BananaGo</a></h1>
         </div>
 
         <nav class="nav">
@@ -30,96 +30,25 @@
             <div class="selector-botones">
                 <button class="selector-btn active" data-form="cliente">Soy Cliente</button>
                 <button class="selector-btn" data-form="taxista">Soy Taxista</button>
+                <button class="selector-btn" data-form="acarreo">Soy Acarreador</button>
             </div>
         </div>
 
-        <!-- Acceso rápido (OTP) -->
-        <div class="quick-access">
-            <button id="btn-quick-access" class="btn">Acceso rápido (OTP)</button>
-            <form id="quick-login" class="form-registro-quick" style="display:none;">
-                <h3>Acceso rápido</h3>
-                <div class="form-grupo">
-                    <label for="quick-telefono">Teléfono</label>
-                    <input type="tel" id="quick-telefono" placeholder="+52 55 1234 5678">
-                </div>
-                <div class="form-grupo">
-                    <label for="quick-codigo">Código (si ya lo tienes)</label>
-                    <input type="text" id="quick-codigo" placeholder="Código OTP">
-                </div>
-                <button type="button" id="quick-send" class="btn-submit">Enviar código</button>
-                <button type="button" id="quick-verify" class="btn-submit" style="margin-top:0.5rem;">Verificar código</button>
-            </form>
-        </div>
+        <!-- Formulario -->
 
-        <!-- Formulario Cliente -->
-        <form id="form-cliente" class="form-registro active">
-            <h3>Registro de Cliente</h3>
-            <div class="form-grupo">
-                <label for="cliente-nombre">Nombre completo</label>
-                <input type="text" id="cliente-nombre" required placeholder="Tu nombre y apellidos">
-            </div>
-            <div class="form-grupo">
-                <label for="cliente-email">Correo electrónico</label>
-                <input type="email" id="cliente-email" required placeholder="tucorreo@ejemplo.com">
-            </div>
-            <div class="form-grupo">
-                <label for="cliente-telefono">Teléfono</label>
-                <input type="tel" id="cliente-telefono" required placeholder="Tu número de teléfono">
-            </div>
-            <div class="form-grupo">
-                <label for="cliente-pseudonimo">Nombre de usuario</label>
-                <input type="text" id="cliente-pseudonimo" required placeholder="Cómo quieres que te llamemos">
-            </div>
-            <div class="form-grupo">
-                <label for="cliente-password">Contraseña</label>
-                <input type="password" id="cliente-password" required placeholder="Crea una contraseña segura">
-            </div>
-            <button type="submit" class="btn-submit">Registrarme como Cliente</button>
-            <p class="login-link">¿Ya tienes cuenta? <a href="#">Inicia sesión aquí</a></p>
-        </form>
-
-        <!-- Formulario Taxista -->
-        <form id="form-taxista" class="form-registro">
-            <h3>Registro de Taxista Profesional</h3>
-            <div class="form-grupo">
-                <label for="taxista-nombre">Nombre completo</label>
-                <input type="text" id="taxista-nombre" required placeholder="Tu nombre y apellidos">
-            </div>
-            <div class="form-grupo">
-                <label for="taxista-email">Correo electrónico</label>
-                <input type="email" id="taxista-email" required placeholder="tucorreo@ejemplo.com">
-            </div>
-            <div class="form-grupo">
-                <label for="taxista-telefono">Teléfono</label>
-                <input type="tel" id="taxista-telefono" required placeholder="Tu número de teléfono">
-            </div>
-            <div class="form-grupo">
-                <label for="taxista-licencia">Número de Licencia</label>
-                <input type="text" id="taxista-licencia" required placeholder="Tu número de licencia de conducir">
-            </div>
-            <div class="form-grupo">
-                <label for="taxista-password">Contraseña</label>
-                <input type="password" id="taxista-password" required placeholder="Crea una contraseña segura">
-            </div>
-            <p class="form-nota">
-                <small>* Después de crear tu cuenta, podrás completar tu perfil con información de tu vehículo y servicios.</small>
-            </p>
-            <button type="submit" class="btn-submit">Registrarme como Taxista</button>
-            <p class="login-link">¿Ya tienes cuenta? <a href="#">Inicia sesión aquí</a></p>
-        </form>
     </main>
 
     <!-- ⚫ FOOTER -->
     <footer class="footer">
         <div class="footer-logo">
-            <img src="assets/img/bananago-logo.png" alt="BananaGo Logo">
+            <img src="../assets/img/bananago-logo.png" alt="BananaGo Logo">
         </div>
         <ul>
             <li><a href="#">Política de privacidad</a></li>
             <li><a href="#">Términos de uso</a></li>
             <li><a href="#">Soporte</a></li>
         </ul>
-        <p>© 2025 BananaGo — Te movemos rico y cómodo a cualquier lugar 🍌🚕</p>
+        <p>© 2025 BananaGo — Te movemos rico y cómodo a cualquier lugar</p>
     </footer>
 
     <script type="module" src="js/main.js"></script>

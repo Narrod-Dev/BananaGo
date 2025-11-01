@@ -1,0 +1,141 @@
+/* Estilos para el contenedor principal */
+.login-container {
+    max-width: 500px;
+    margin: 7rem auto 2rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el selector de tipo de usuario */
+.tipo-usuario-selector {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.tipo-usuario-selector h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.selector-botones {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.selector-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #FFD700;
+    background-color: transparent;
+    color: #333;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.selector-btn:hover {
+    background-color: #FFD700;
+    color: #000;
+}
+
+.selector-btn.active {
+    background-color: #FFD700;
+    color: #000;
+}
+
+/* Estilos para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+form label {
+    font-weight: 500;
+    color: #555;
+}
+
+form input[type="email"],
+form input[type="password"] {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    border-color: #FFD700;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+}
+
+/* Estilos para el checkbox */
+form div:has(input[type="checkbox"]) {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+form input[type="checkbox"] {
+    accent-color: #FFD700;
+}
+
+/* Estilos para el botón de envío */
+form button[type="submit"] {
+    background-color: #FFD700;
+    color: #000;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #F2C94C;
+}
+
+/* Estilos para los enlaces */
+.links {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.links a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.links a:hover {
+    color: #FFD700;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .login-container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .selector-botones {
+        flex-direction: column;
+    }
+
+    .selector-btn {
+        width: 100%;
+    }
+}
