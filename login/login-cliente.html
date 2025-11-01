@@ -33,6 +33,24 @@
             </div>
         </div>
 
+        <!-- Acceso rápido (OTP) -->
+        <div class="quick-access">
+            <button id="btn-quick-access" class="btn">Acceso rápido (OTP)</button>
+            <form id="quick-login" class="form-registro-quick" style="display:none;">
+                <h3>Acceso rápido</h3>
+                <div class="form-grupo">
+                    <label for="quick-telefono">Teléfono</label>
+                    <input type="tel" id="quick-telefono" placeholder="+52 55 1234 5678">
+                </div>
+                <div class="form-grupo">
+                    <label for="quick-codigo">Código (si ya lo tienes)</label>
+                    <input type="text" id="quick-codigo" placeholder="Código OTP">
+                </div>
+                <button type="button" id="quick-send" class="btn-submit">Enviar código</button>
+                <button type="button" id="quick-verify" class="btn-submit" style="margin-top:0.5rem;">Verificar código</button>
+            </form>
+        </div>
+
         <!-- Formulario Cliente -->
         <form id="form-cliente" class="form-registro active">
             <h3>Registro de Cliente</h3>

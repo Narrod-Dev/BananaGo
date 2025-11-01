@@ -99,17 +99,26 @@ body {
     font-size: 2.5rem;
 }
 
-.tipos-usuario {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-}
+    .tipos-usuario {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
 
-.tipos-usuario > div {
+    .tipos-usuario > div {
     padding: 2.5rem;
     border-radius: 15px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Asegurar que el botón dentro de cada tarjeta quede al fondo */
+.tipos-usuario > div .btn {
+    margin-top: 1.25rem;
+    align-self: center;
 }
 
 .cliente {
@@ -118,6 +127,12 @@ body {
 
 .taxista {
     background-color: var(--color-gray-light);
+}
+
+.acarreo {
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-text);
+    box-shadow: 0 6px 18px rgba(255, 215, 0, 0.12);
 }
 
 .tipos-usuario h3 {
@@ -246,10 +261,27 @@ body {
     }
 
     .tipos-usuario {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        display: flex;
+        flex-direction: row; /* asegurar fila en desktop */
+        gap: 1.5rem;
         padding: 0 2rem;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    /* Cada tarjeta ocupa el mismo espacio y se alinea en una sola fila */
+    .tipos-usuario > div {
+        flex: 1 1 0;
+        min-width: 220px;
+        max-width: 420px;
+        box-shadow: var(--shadow-sm);
+        background-clip: padding-box;
+    }
+
+    /* Hover: elevar tarjeta */
+    .tipos-usuario > div:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 24px rgba(0,0,0,0.12);
     }
 
     .reseñas {
