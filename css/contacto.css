@@ -1,0 +1,39 @@
+/* Estilos específicos para la página de contacto, respetando la paleta global */
+
+section form label {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+section form input,
+section form textarea {
+    width: 100%;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+@media (min-width: 768px) {
+    /* Colocar el formulario centrado y con buen espaciado en desktop */
+    section[style] {
+        padding: 3rem;
+    }
+}
+
+.contact-success {
+    background: #e6ffea;
+    border: 1px solid #c6f2d0;
+    color: #1b6b2b;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-top: 0.75rem;
+}
+
+.contact-error {
+    background: #ffecec;
+    border: 1px solid #f4c6c6;
+    color: #8b1b1b;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-top: 0.75rem;
+}
