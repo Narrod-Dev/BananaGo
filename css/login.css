@@ -1,0 +1,180 @@
+/* Ajuste para el header fijo */
+body {
+    padding-top: 80px;
+    background-color: var(--color-gray-light);
+}
+
+.login-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Selector de tipo de usuario */
+.tipo-usuario-selector {
+    background-color: var(--color-background);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.tipo-usuario-selector h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+}
+
+.selector-botones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.selector-btn {
+    padding: 1rem;
+    border: 2px solid var(--color-primary);
+    background: transparent;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.selector-btn:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.selector-btn.active {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+/* Formularios */
+.form-registro {
+    background-color: var(--color-background);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-sm);
+    display: none;
+}
+
+.form-registro.active {
+    display: block;
+}
+
+.form-registro h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+    text-align: center;
+}
+
+.form-grupo {
+    margin-bottom: 1.5rem;
+}
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.form-grupo input,
+.form-grupo textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--color-gray);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-grupo input:focus,
+.form-grupo textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+.form-grupo small {
+    display: block;
+    margin-top: 0.5rem;
+    color: var(--color-text);
+    opacity: 0.7;
+    font-size: 0.875rem;
+}
+
+/* Nota informativa */
+.form-nota {
+    background-color: var(--color-gray-light);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.form-nota small {
+    color: var(--color-text);
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* Botón de envío */
+.btn-submit {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-submit:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: var(--color-primary-dark);
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-container {
+        margin: 1rem auto;
+    }
+
+    .tipo-usuario-selector,
+    .form-registro {
+        padding: 1.5rem;
+    }
+}
+
+/* Estilos específicos para el formulario de taxista */
+#form-taxista .form-grupo input[type="file"] {
+    padding: 0.5rem;
+    border: 2px dashed var(--color-gray);
+    background-color: var(--color-gray-light);
+    cursor: pointer;
+}
+
+#form-taxista .form-grupo textarea {
+    resize: vertical;
+    min-height: 100px;
+}
