@@ -5,46 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear cuenta | BananaGo</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/login/inicio-sesion.css"">
+    <link rel="stylesheet" href="../css/login/inicio-sesion.css">
+    <link rel="stylesheet" href="../css/login/login-cliente.css">
 </head>
 <body>
     <!-- 🟨 HEADER -->
     <header class="header">
         <div class="logo">
             <img src="../assets/img/bananago-logo.png" alt="Logo BananaGo">
-            <h1><span class="oculto">Iniciar Sesión | </span><a href="../index.html">BananaGo</a></h1>
+            <h1><span class="oculto">Registro | </span><a href="../index.html">BananaGo</a></h1>
         </div>
 
         <nav class="nav">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="index.html#usuarios">Regístrate</a></li>
-                <li><a href="/contacto.html">Contacto</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html#usuarios">Regístrate</a></li>
+                <li><a href="../contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="login-container">
-        <!-- Formulario -->
-        <form action="/login" method="POST">
-            <h2>Iniciar sesión</h2>
+        <div class="tipo-usuario-selector">
+            <h2>¿Cómo quieres usar BananaGo?</h2>
+            <div class="selector-botones">
+                <a class="selector-btn active" href="login-cliente.html">Soy Cliente</a>
+                <a class="selector-btn" href="login-taxista.html">Soy Taxista</a>
+                <a class="selector-btn" href="login-acarreo.html">Soy Acarreador</a>
+            </div>
+        </div>
 
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
+        <!-- Formulario de registro cliente -->
+        <form class="login-form" action="/register" method="POST">
+            <h2>Crear cuenta - Cliente</h2>
+            <div class="form-grid">
+                <div class="form-row">
+                    <label for="name">Nombre completo</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
 
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
+                <div class="form-row">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-            <div>
-                <input type="checkbox" id="remember" name="remember">
-                <label for="remember">Recordarme</label>
+                <div class="form-row">
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-row">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="password_confirm">Confirmar contraseña</label>
+                    <input type="password" id="password_confirm" name="password_confirm" required>
+                </div>
+
+                <div class="form-row field-full">
+                    <button type="submit">Crear cuenta</button>
+                </div>
             </div>
 
-            <button type="submit">Iniciar sesión</button>
-
             <div class="links">
-                <a href="/forgot">¿Olvidaste tu contraseña?</a><br>
-                <a href="/login/login-cliente.html">Crear cuenta nueva</a>
+                <a href="inicio-sesion.html">Ya tengo cuenta</a>
             </div>
         </form>
 
@@ -63,6 +89,6 @@
         <p>© 2025 BananaGo — Te movemos rico y cómodo a cualquier lugar</p>
     </footer>
 
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="../js/main.js"></script>
 </body>
 </html>

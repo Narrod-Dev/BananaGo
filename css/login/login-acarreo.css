@@ -1,0 +1,159 @@
+/* login-unificado.css - Estilos unificados para todos los formularios de registro */
+
+/* Contenedor principal unificado */
+.login-container {
+    max-width: 640px;
+    margin: 6.5rem auto 2rem;
+    padding: 2rem;
+    background-color: var(--color-background);
+    border-radius: 12px;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+}
+
+/* Selector de tipo de usuario */
+.tipo-usuario-selector {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.tipo-usuario-selector h2 {
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.selector-botones {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.selector-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 28px;
+    border: 2px solid var(--color-primary);
+    background: transparent;
+    color: var(--color-secondary);
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.selector-btn.active,
+.selector-btn:hover {
+    background: var(--color-primary);
+    color: var(--color-text);
+}
+
+/* Formularios */
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--color-secondary);
+}
+
+/* Organizar campos en dos columnas en pantallas grandes */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 720px) {
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+    }
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos comunes a inputs */
+.form-row label {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 0.4rem;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+input[type="password"] {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--color-gray);
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0.95rem;
+    background: #fff;
+    transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--color-primary-dark);
+    box-shadow: 0 2px 8px rgba(255,215,0,0.12);
+}
+
+/* Botón principal unificado */
+button[type="submit"] {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--color-primary);
+    color: var(--color-text);
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: var(--shadow-sm);
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* Enlaces */
+.links {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.links a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.links a:hover {
+    color: var(--color-primary);
+}
+
+/* Campos que ocupan todo el ancho */
+.field-full {
+    grid-column: 1 / -1;
+}
+
+/* Responsive unificado */
+@media (max-width: 600px) {
+    .login-container {
+        margin: 4.5rem 1rem 1rem;
+        padding: 1.5rem;
+    }
+    
+    .selector-botones {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .selector-btn {
+        width: 100%;
+    }
+}
