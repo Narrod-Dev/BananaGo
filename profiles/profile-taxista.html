@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Perfil Taxista | BananaGo</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/profiles/profile-taxista.css">
+</head>
+<body>
+    <!-- 🟨 HEADER -->
+    <header class="header">
+        <div class="logo">
+            <img src="../assets/img/bananago-logo.png" alt="Logo BananaGo">
+            <h1><span class="oculto">Home | </span><a href="../index.html">BananaGo</a></h1>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html#usuarios">Regístrate</a></li>
+                <li><a href="../contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Opciones para taxista logueado -->
+        <div class="header-actions">
+            <a href="solicitudes.html" class="header-btn">Solicitudes <span class="badge">2</span></a>
+
+            <div class="profile-menu" tabindex="0">
+                <img class="avatar-sm" src="../assets/img/profiles-index/perfil-1-male.png" alt="Avatar">
+
+                <div class="profile-dropdown" aria-hidden="true">
+                    <div class="dropdown-header">
+                        <strong>Carlos T.</strong>
+                        <div class="muted">@Carlos_t</div>
+                    </div>
+                    <ul>
+                        <li><a href="solicitudes.html">Solicitudes en curso</a></li>
+                        <li><a href="viajes-en-curso.html">Viajes en curso</a></li>
+                        <li><a href="historial.html">Historial</a></li>
+                        <li><a href="ganancias.html">Ganancias</a></li>
+                        <li><a href="mensajes.html">Mensajes</a></li>
+                        <li><a href="ajustes.html">Ajustes</a></li>
+                        <li><a href="logout.html" class="danger">Cerrar sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="profile-container">
+            <section class="profile-header">
+                <div class="profile-cover">
+                    <img class="cover-img" src="../assets/img/Banner/taxi.png" alt="Portada">
+                </div>
+                <div class="profile-avatar">
+                    <img src="../assets/img/profiles-index/perfil-1-male.png" alt="Foto de perfil">
+                </div>
+                <div class="profile-info">
+                    <h2 class="profile-name">Carlos T.</h2>
+                    <p class="profile-username">@Carlos_t</p>
+                    
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">420</div>
+                            <div class="stat-label">Viajes</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">4.9</div>
+                            <div class="stat-label">Calificación</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">6</div>
+                            <div class="stat-label">Meses</div>
+                        </div>
+                    </div>
+
+                    <p class="profile-bio">
+                        Taxista con más de 6 meses en BananaGo. Apasionado por brindar un servicio seguro y cómodo a mis pasajeros.
+                    </p>
+
+                    <div class="profile-actions">
+                        <a href="#" class="btn-edit-profile">Editar Perfil</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recent-trips">
+                <h3 class="trips-title">Viajes Recientes</h3>
+                <div class="trip-list">
+                    <div class="trip-item">
+                        <div class="trip-icon">🚖</div>
+                        <div class="trip-details">
+                            <div class="trip-date">Hoy, 14:30</div>
+                            <div class="trip-route">Parque Central → Mercado Municipal</div>
+                            <div class="trip-status">Completado</div>
+                        </div>
+                    </div>
+
+                    <div class="trip-item">
+                        <div class="trip-icon">🚖</div>
+                        <div class="trip-details">
+                            <div class="trip-date">Ayer, 09:15</div>
+                            <div class="trip-route">Zona #1 → URACCAN CUR Nueva Guinea</div>
+                            <div class="trip-status">Completado</div>
+                        </div>
+                    </div>
+
+                    <div class="trip-item">
+                        <div class="trip-icon">🚖</div>
+                        <div class="trip-details">
+                            <div class="trip-date">2 nov, 18:45</div>
+                            <div class="trip-route">Zona #4 → Hospital Regional</div>
+                            <div class="trip-status">Completado</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="profile-reviews">
+                <h3 class="reviews-title">Reseñas Recibidas</h3>
+                <div class="review-list">
+                    <article class="review-item">
+                        <div class="review-header">
+                            <img class="client-profile" src="../assets/img/profiles-index/perfil-1-femal.png" alt="Foto Ana L.">
+                            <div class="reviewer">
+                                <h4>Ana L.</h4>
+                                <p class="review-role">Cliente · <span class="review-date">3 nov</span></p>
+                            </div>
+                            <div class="review-rating">★★★★★</div>
+                        </div>
+                        <p class="review-text">Carlos fue muy amable y el viaje fue súper cómodo. Llegó a tiempo y el conductor conocía rutas rápidas.</p>
+                    </article>
+
+                    <article class="review-item">
+                        <div class="review-header">
+                            <img class="client-profile" src="../assets/img/profiles-index/perfil-2-male.png" alt="Foto José M.">
+                            <div class="reviewer">
+                                <h4>José M.</h4>
+                                <p class="review-role">Cliente · <span class="review-date">28 oct</span></p>
+                            </div>
+                            <div class="review-rating">★★★★☆</div>
+                        </div>
+                        <p class="review-text">Buen servicio, coche limpio y el conductor fue respetuoso. Recomendado para viajes largos.</p>
+                    </article>
+
+                    <article class="review-item">
+                        <div class="review-header">
+                            <img class="client-profile" src="../assets/img/profiles-index/perfil-3-femal.png" alt="Foto Lucía R.">
+                            <div class="reviewer">
+                                <h4>Lucía R.</h4>
+                                <p class="review-role">Cliente · <span class="review-date">20 oct</span></p>
+                            </div>
+                            <div class="review-rating">★★★★★</div>
+                        </div>
+                        <p class="review-text">Viaje perfecto, muy amable y con buena música. Puntualidad y trato 10/10.</p>
+                    </article>
+                </div>
+
+                <div class="reviews-actions">
+                    <a href="#" class="btn">Ver todas las reseñas</a>
+                </div>
+            </section>
+    </main>
+
+    <!-- ⚫ FOOTER -->
+    <footer id="contacto" class="footer">
+        <div class="footer-logo">
+            <img src="../assets/img/bananago-logo.png" alt="BananaGo Logo">
+            <p>BananaGo — Te movemos rico y cómodo a cualquier lugar</p>
+        </div>
+        <ul>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Soporte</a></li>
+        </ul>
+        <p>©Copyright 2025. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
