@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BananaGo - Panel Acarreo</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/landing/landing-acarreo.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../assets/img/bananago-logo.png" alt="Logo BananaGo">
+            <h1><span class="oculto">Home | </span><a href="../index.html">BananaGo</a></h1>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html#usuarios">Regístrate</a></li>
+                <li><a href="../contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <img src="../assets/img/bananago-logo.png" alt="BananaGo" class="app-logo">
+            <h1 class="app-title">Panel Acarreo</h1>
+            <p class="app-subtitle">Servicios de carga y transporte</p>
+        </header>
+
+        <!-- Estado del conductor -->
+        <div class="driver-status">
+            <div class="status-toggle">
+                <span>Modo Disponible</span>
+                <div class="toggle-switch active" id="statusToggle">
+                    <div class="toggle-slider"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Indicador de capacidad -->
+        <div class="capacity-indicator">
+            🚚 Toyota Hilux • Capacidad: 1.5 Toneladas
+        </div>
+
+        <!-- Servicios ofrecidos -->
+        <div class="services-grid">
+            <div class="service-tag">📦 Mudanzas</div>
+            <div class="service-tag">🏪 Mercancías</div>
+            <div class="service-tag">🛋️ Muebles</div>
+            <div class="service-tag">📱 Equipos</div>
+            <div class="service-tag">🛒 Compras</div>
+            <div class="service-tag">🔧 Materiales</div>
+        </div>
+
+        <!-- Estadísticas rápidas -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">$320</div>
+                <div class="stat-label">Ganado hoy</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">5</div>
+                <div class="stat-label">Servicios hoy</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">4.6</div>
+                <div class="stat-label">Rating</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">3.2h</div>
+                <div class="stat-label">En línea</div>
+            </div>
+        </div>
+
+        <!-- Opciones principales -->
+        <div class="options-grid">
+            <!-- Solicitudes -->
+            <button class="option-card" onclick="location.href='conductor/solicitudes.html'">
+                <div class="option-icon icon-solicitudes">📦</div>
+                <div class="option-content">
+                    <h3 class="option-title">Solicitudes</h3>
+                    <p class="option-desc">Clientes necesitan acarreo</p>
+                </div>
+                <div class="option-badge">4 nuevas</div>
+            </button>
+
+            <!-- Servicio en curso -->
+            <button class="option-card" onclick="location.href='conductor/viaje-activo.html'">
+                <div class="option-icon icon-servicio">🚚</div>
+                <div class="option-content">
+                    <h3 class="option-title">Servicio Activo</h3>
+                    <p class="option-desc">Gestiona tu servicio actual</p>
+                </div>
+                <div class="option-badge" style="background: #4CAF50; color: white;">Activo</div>
+            </button>
+
+            <!-- Ganancias -->
+            <button class="option-card" onclick="location.href='conductor/ganancias.html'">
+                <div class="option-icon icon-ganancias">💰</div>
+                <div class="option-content">
+                    <h3 class="option-title">Mis Ganancias</h3>
+                    <p class="option-desc">Resumen de ingresos</p>
+                </div>
+            </button>
+
+            <!-- Mi Vehículo -->
+            <button class="option-card" onclick="location.href='conductor/vehiculo.html'">
+                <div class="option-icon icon-vehiculo">🔧</div>
+                <div class="option-content">
+                    <h3 class="option-title">Mi Vehículo</h3>
+                    <p class="option-desc">Gestionar información</p>
+                </div>
+            </button>
+
+            <!-- Perfil -->
+            <button class="option-card" onclick="location.href='../profiles/profile-acarreo.html'">
+                <div class="option-icon icon-perfil">👤</div>
+                <div class="option-content">
+                    <h3 class="option-title">Mi Perfil</h3>
+                    <p class="option-desc">Ver y editar perfil</p>
+                </div>
+            </button>
+
+            <!-- Historial -->
+            <button class="option-card" onclick="location.href='conductor/historial.html'">
+                <div class="option-icon icon-historial">📊</div>
+                <div class="option-content">
+                    <h3 class="option-title">Historial</h3>
+                    <p class="option-desc">Todos mis servicios</p>
+                </div>
+            </button>
+
+            <!-- Ajustes -->
+            <button class="option-card" onclick="location.href='conductor/ajustes.html'">
+                <div class="option-icon icon-ajustes">⚙️</div>
+                <div class="option-content">
+                    <h3 class="option-title">Ajustes</h3>
+                    <p class="option-desc">Configuración</p>
+                </div>
+            </button>
+        </div>
+
+        <!-- Info conductor -->
+        <div class="driver-info">
+            <img src="assets/img/profiles-index/perfil-2-femal.png" alt="Conductora" class="driver-avatar">
+            <div>Ana L.</div>
+            <div style="font-size: 0.8rem; opacity: 0.8;">@ana_l • Especialista en mudanzas</div>
+        </div>
+    </div>
+
+    <!-- ⚫ FOOTER -->
+    <footer id="contacto" class="footer">
+        <div class="footer-logo">
+            <img src="../assets/img/bananago-logo.png" alt="BananaGo Logo">
+            <p>BananaGo — Te movemos rico y cómodo a cualquier lugar</p>
+        </div>
+        <ul>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Soporte</a></li>
+        </ul>
+        <p>©Copyright 2025. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Toggle de disponibilidad
+        const statusToggle = document.getElementById('statusToggle');
+        statusToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const isActive = this.classList.contains('active');
+            document.querySelector('.status-toggle span').textContent = 
+                isActive ? 'Modo Disponible' : 'Modo No Disponible';
+        });
+
+        // Efectos de click en tarjetas
+        document.querySelectorAll('.option-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BananaGo - Panel Taxista</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/landing/landing-taxista.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../assets/img/bananago-logo.png" alt="Logo BananaGo">
+            <h1><span class="oculto">Home | </span><a href="../index.html">BananaGo</a></h1>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html#usuarios">Regístrate</a></li>
+                <li><a href="../contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <img src="../assets/img/bananago-logo.png" alt="BananaGo" class="app-logo">
+            <h1 class="app-title">Panel Taxista</h1>
+            <p class="app-subtitle">Gana dinero con tus viajes</p>
+        </header>
+
+        <!-- Estado del conductor -->
+        <div class="driver-status">
+            <div class="status-toggle">
+                <span>Modo Disponible</span>
+                <div class="toggle-switch active" id="statusToggle">
+                    <div class="toggle-slider"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Estadísticas rápidas -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">C$245</div>
+                <div class="stat-label">Ganado hoy</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">8</div>
+                <div class="stat-label">Viajes hoy</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">4.9</div>
+                <div class="stat-label">Rating</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">2.5h</div>
+                <div class="stat-label">En línea</div>
+            </div>
+        </div>
+
+        <!-- Opciones principales -->
+        <div class="options-grid">
+            <!-- Solicitudes -->
+            <button class="option-card" onclick="location.href='conductor/solicitudes.html'">
+                <div class="option-icon icon-solicitudes">📱</div>
+                <div class="option-content">
+                    <h3 class="option-title">Solicitudes</h3>
+                    <p class="option-desc">Clientes esperando servicio</p>
+                </div>
+                <div class="option-badge">3 nuevas</div>
+            </button>
+
+            <!-- Viaje en curso -->
+            <button class="option-card" onclick="location.href='conductor/viaje-activo.html'">
+                <div class="option-icon icon-viaje">🚗</div>
+                <div class="option-content">
+                    <h3 class="option-title">Viaje Activo</h3>
+                    <p class="option-desc">Gestiona tu viaje actual</p>
+                </div>
+                <div class="option-badge" style="background: #4CAF50; color: white;">Activo</div>
+            </button>
+
+            <!-- Ganancias -->
+            <button class="option-card" onclick="location.href='#'">
+                <div class="option-icon icon-ganancias">💰</div>
+                <div class="option-content">
+                    <h3 class="option-title">Mis Ganancias</h3>
+                    <p class="option-desc">Resumen de ingresos</p>
+                </div>
+            </button>
+
+            <!-- Perfil -->
+            <button class="option-card" onclick="location.href='../profiles/profile-taxista.html'">
+                <div class="option-icon icon-perfil">👤</div>
+                <div class="option-content">
+                    <h3 class="option-title">Mi Perfil</h3>
+                    <p class="option-desc">Ver y editar perfil</p>
+                </div>
+            </button>
+
+            <!-- Historial -->
+            <button class="option-card" onclick="location.href='conductor/historial.html'">
+                <div class="option-icon icon-historial">📊</div>
+                <div class="option-content">
+                    <h3 class="option-title">Historial</h3>
+                    <p class="option-desc">Todos mis viajes</p>
+                </div>
+            </button>
+
+            <!-- Ajustes -->
+            <button class="option-card" onclick="location.href='conductor/ajustes.html'">
+                <div class="option-icon icon-ajustes">⚙️</div>
+                <div class="option-content">
+                    <h3 class="option-title">Ajustes</h3>
+                    <p class="option-desc">Configuración</p>
+                </div>
+            </button>
+        </div>
+
+        <!-- Info conductor -->
+        <div class="driver-info">
+            <img src="../assets/img/profiles-index/perfil-1-male.png" alt="Conductor" class="driver-avatar">
+            <div>Carlos T.</div>
+            <div style="font-size: 0.8rem; opacity: 0.8;">@Carlos_t • Toyota Corolla</div>
+        </div>
+    </div>
+
+    <!-- ⚫ FOOTER -->
+    <footer id="contacto" class="footer">
+        <div class="footer-logo">
+            <img src="../assets/img/bananago-logo.png" alt="BananaGo Logo">
+            <p>BananaGo — Te movemos rico y cómodo a cualquier lugar</p>
+        </div>
+        <ul>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Soporte</a></li>
+        </ul>
+        <p>©Copyright 2025. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Toggle de disponibilidad
+        const statusToggle = document.getElementById('statusToggle');
+        statusToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const isActive = this.classList.contains('active');
+            document.querySelector('.status-toggle span').textContent = 
+                isActive ? 'Modo Disponible' : 'Modo No Disponible';
+        });
+
+        // Efectos de click en tarjetas
+        document.querySelectorAll('.option-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>

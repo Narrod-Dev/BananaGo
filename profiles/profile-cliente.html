@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Perfil Cliente | BananaGo</title>
+    <title>Perfil Cliente | BananaGo</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/profiles/profile-taxista.css">
+    <link rel="stylesheet" href="../css/profiles/profile-cliente.css">
 </head>
 <body>
     <!-- 🟨 HEADER -->
@@ -23,24 +23,24 @@
             </ul>
         </nav>
 
-        <!-- Opciones para taxista logueado -->
+        <!-- Opciones para cliente logueado -->
         <div class="header-actions">
-            <a href="solicitudes.html" class="header-btn">Solicitudes <span class="badge">2</span></a>
+            <a href="solicitudes.html" class="header-btn">Mis Viajes <span class="badge">1</span></a>
 
             <div class="profile-menu" tabindex="0">
                 <img class="avatar-sm" src="../assets/img/profiles-index/perfil-1-male.png" alt="Avatar">
 
                 <div class="profile-dropdown" aria-hidden="true">
                     <div class="dropdown-header">
-                        <strong>Carlos T.</strong>
-                        <div class="muted">@Carlos_t</div>
+                        <strong>María López</strong>
+                        <div class="muted">@maria_l</div>
                     </div>
                     <ul>
-                        <li><a href="solicitudes.html">Solicitudes en curso</a></li>
+                        <li><a href="solicitar-viaje.html">Solicitar viaje</a></li>
                         <li><a href="viajes-en-curso.html">Viajes en curso</a></li>
-                        <li><a href="historial.html">Historial</a></li>
-                        <li><a href="ganancias.html">Ganancias</a></li>
-                        <li><a href="mensajes.html">Mensajes</a></li>
+                        <li><a href="historial.html">Historial de viajes</a></li>
+                        <li><a href="pagos.html">Métodos de pago</a></li>
+                        <li><a href="favoritos.html">Lugares favoritos</a></li>
                         <li><a href="ajustes.html">Ajustes</a></li>
                         <li><a href="logout.html" class="danger">Cerrar sesión</a></li>
                     </ul>
@@ -50,7 +50,166 @@
     </header>
 
     <main>
-        
+        <div class="profile-container">
+            <!-- Header simplificado sin portada -->
+            <header class="profile-header-simple">
+                <div class="profile-avatar-main">
+                    <img src="../assets/img/profiles-index/perfil-1-femal.png" alt="Avatar cliente">
+                </div>
+
+                <div class="profile-info">
+                    <div class="profile-name">María G.</div>
+                    <div class="profile-username">@maria_g</div>
+                    <p class="profile-bio">Me encanta viajar por la ciudad. Uso BananaGo para trayectos cortos y traslados al aeropuerto.</p>
+
+                    <div class="profile-actions">
+                        <a href="solicitar-viaje.html" class="btn-primary">Solicitar viaje</a>
+                        <a href="ajustes.html" class="btn-secondary">Editar perfil</a>
+                    </div>
+
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">124</div>
+                            <div class="stat-label">Viajes</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">4.9</div>
+                            <div class="stat-label">Valoración</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">12</div>
+                            <div class="stat-label">Favoritos</div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="layout-grid">
+                <div class="col-main">
+                    <!-- Viajes recientes -->
+                    <article class="card recent-trips">
+                        <h3 class="trips-title">Viajes recientes</h3>
+                        <div class="trip-list">
+                            <div class="trip-item">
+                                <div class="trip-icon">🚗</div>
+                                <div class="trip-details">
+                                    <div class="trip-route">Casa → Trabajo</div>
+                                    <div class="trip-date">Hoy — 08:30</div>
+                                    <div class="trip-price">$8.50</div>
+                                </div>
+                                <div class="trip-status completed">Completado</div>
+                            </div>
+                            <div class="trip-item">
+                                <div class="trip-icon">🚗</div>
+                                <div class="trip-details">
+                                    <div class="trip-route">Centro Comercial → Casa</div>
+                                    <div class="trip-date">Ayer — 18:15</div>
+                                    <div class="trip-price">$12.00</div>
+                                </div>
+                                <div class="trip-status completed">Completado</div>
+                            </div>
+                            <div class="trip-item">
+                                <div class="trip-icon">🚗</div>
+                                <div class="trip-details">
+                                    <div class="trip-route">Aeropuerto → Hotel</div>
+                                    <div class="trip-date">5 nov — 14:20</div>
+                                    <div class="trip-price">$25.75</div>
+                                </div>
+                                <div class="trip-status completed">Completado</div>
+                            </div>
+                        </div>
+                        <div class="section-actions">
+                            <a href="historial.html" class="btn-link">Ver historial completo</a>
+                        </div>
+                    </article>
+
+                    <!-- Lugares favoritos -->
+                    <article class="card favorites-card">
+                        <h3 class="trips-title">Lugares favoritos</h3>
+                        <div class="trip-list">
+                            <div class="trip-item">
+                                <div class="trip-icon">📍</div>
+                                <div class="trip-details">
+                                    <div class="trip-route">Aeropuerto Internacional</div>
+                                    <div class="trip-date">Dirección guardada</div>
+                                </div>
+                                <button class="trip-action">Usar</button>
+                            </div>
+                            <div class="trip-item">
+                                <div class="trip-icon">📍</div>
+                                <div class="trip-details">
+                                    <div class="trip-route">Oficina Central</div>
+                                    <div class="trip-date">Dirección guardada</div>
+                                </div>
+                                <button class="trip-action">Usar</button>
+                            </div>
+                            <div class="trip-item">
+                                <div class="trip-icon">📍</div>
+                                <div class="trip-details">
+                                    <div class="trip-route">Casa de mis padres</div>
+                                    <div class="trip-date">Dirección guardada</div>
+                                </div>
+                                <button class="trip-action">Usar</button>
+                            </div>
+                        </div>
+                        <div class="section-actions">
+                            <a href="favoritos.html" class="btn-link">Gestionar favoritos</a>
+                        </div>
+                    </article>
+                </div>
+
+                <aside class="col-side">
+                    <!-- Información rápida -->
+                    <div class="card quick-info">
+                        <h4 class="info-title">Mi cuenta</h4>
+                        <div class="info-item">
+                            <span class="info-label">Saldo disponible:</span>
+                            <span class="info-value">$45.25</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Método principal:</span>
+                            <span class="info-value">Tarjeta **** 1234</span>
+                        </div>
+                        <div class="quick-actions">
+                            <a href="pagos.html" class="btn-secondary small">Recargar saldo</a>
+                            <a href="pagos.html" class="btn-secondary small">Métodos de pago</a>
+                        </div>
+                    </div>
+
+                    <!-- Reseñas recientes -->
+                    <div class="card profile-reviews">
+                        <h4 class="reviews-title">Reseñas recientes</h4>
+                        <div class="review-list">
+                            <article class="review-item">
+                                <div class="review-header">
+                                    <img class="driver-profile" src="../assets/img/profiles-index/perfil-2-female.png" alt="conductor">
+                                    <div class="reviewer">
+                                        <h4>Ana P.</h4>
+                                        <div class="review-role">Conductora</div>
+                                    </div>
+                                    <div class="review-rating">5.0</div>
+                                </div>
+                                <p class="review-text">María fue muy puntual y amable durante todo el viaje.</p>
+                            </article>
+                            <article class="review-item">
+                                <div class="review-header">
+                                    <img class="driver-profile" src="../assets/img/profiles-index/perfil-1-male.png" alt="conductor">
+                                    <div class="reviewer">
+                                        <h4>Carlos T.</h4>
+                                        <div class="review-role">Conductor</div>
+                                    </div>
+                                    <div class="review-rating">4.8</div>
+                                </div>
+                                <p class="review-text">Buena comunicación y ubicación exacta.</p>
+                            </article>
+                        </div>
+                        <div class="section-actions">
+                            <a href="#" class="btn-link">Ver todas las reseñas</a>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+        </div>
     </main>
 
     <!-- ⚫ FOOTER -->
@@ -66,6 +225,5 @@
         </ul>
         <p>©Copyright 2025. Todos los derechos reservados.</p>
     </footer>
-
 </body>
 </html>

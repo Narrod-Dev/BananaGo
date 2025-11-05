@@ -1,0 +1,138 @@
+
+/* Estilos específicos para la app */
+.app-container {
+    margin-top: 60px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0e0b8, #E6C200);
+    padding: 1rem;
+}
+
+.app-header {
+    text-align: center;
+    padding: 1rem 0 2rem;
+}
+
+.app-logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+}
+
+.app-title {
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+        .app-subtitle {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .options-grid {
+            display: grid;
+            gap: 1.5rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .option-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+        }
+
+        .option-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+        }
+
+        .option-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .option-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .option-desc {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .taxi-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .taxi-card .option-title,
+        .taxi-card .option-desc {
+            color: white;
+        }
+
+        .acarreo-card {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: white;
+        }
+
+        .acarreo-card .option-title,
+        .acarreo-card .option-desc {
+            color: white;
+        }
+
+        .profile-card {
+            background: white;
+            border: 2px solid #FFD700;
+        }
+
+        .quick-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+            max-width: 400px;
+            margin: 2rem auto 0;
+        }
+
+        .quick-btn {
+            background: rgba(255,255,255,0.9);
+            border: none;
+            border-radius: 15px;
+            padding: 1rem;
+            font-weight: 600;
+            color: #333;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .quick-btn:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        .user-info {
+            text-align: center;
+            margin-top: 2rem;
+            color: #333;
+        }
+
+        .user-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin: 0 auto 1rem;
+        }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Perfil Taxista | BananaGo</title>
+    <title>Perfil Acarreo | BananaGo</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/profiles/profile-taxista.css">
 </head>
@@ -23,13 +23,12 @@
             </ul>
         </nav>
 
-        <!-- Opciones para taxista logueado -->
+        <!-- Opciones para acarreador logueado -->
         <div class="header-actions">
-            <a href="solicitudes.html" class="header-btn">Solicitudes <span class="badge">2</span></a>
+            <a href="solicitudes.html" class="header-btn">Solicitudes <span class="badge">3</span></a>
 
             <div class="profile-menu" tabindex="0">
                 <img class="avatar-sm" src="../assets/img/profiles-index/perfil-2-femal.png" alt="Avatar">
-
                 <div class="profile-dropdown" aria-hidden="true">
                     <div class="dropdown-header">
                         <strong>Ana L.</strong>
@@ -53,19 +52,51 @@
         <div class="profile-container">
             <section class="profile-header">
                 <div class="profile-cover">
-                    <img class="cover-img" src="../assets/img/Banner/camioneta.png" alt="Portada">
+                    <img class="cover-img" src="../assets/img/Banner/camioneta.png" alt="Portada acarreo">
                 </div>
                 <div class="profile-avatar">
                     <img src="../assets/img/profiles-index/perfil-2-femal.png" alt="Foto de perfil">
                 </div>
+                
                 <div class="profile-info">
                     <h2 class="profile-name">Ana L.</h2>
                     <p class="profile-username">@ana_l</p>
                     
+                    <!-- INFORMACIÓN DEL VEHÍCULO DE ACARREO -->
+                    <div class="vehicle-card">
+                        <h3 class="vehicle-title">Mi Vehículo de Acarreo</h3>
+                        <div class="vehicle-details">
+                            <div class="vehicle-item">
+                                <span class="vehicle-label">Tipo:</span>
+                                <span class="vehicle-value">Camioneta de Carga</span>
+                            </div>
+                            <div class="vehicle-item">
+                                <span class="vehicle-label">Modelo:</span>
+                                <span class="vehicle-value">Toyota Hilux 2021</span>
+                            </div>
+                            <div class="vehicle-item">
+                                <span class="vehicle-label">Placa:</span>
+                                <span class="vehicle-value">XYZ-789</span>
+                            </div>
+                            <div class="vehicle-item">
+                                <span class="vehicle-label">Capacidad:</span>
+                                <span class="vehicle-value">1.5 Toneladas</span>
+                            </div>
+                            <div class="vehicle-item">
+                                <span class="vehicle-label">Carrocería:</span>
+                                <span class="vehicle-value">Cerrada</span>
+                            </div>
+                            <div class="vehicle-item">
+                                <span class="vehicle-label">Servicios:</span>
+                                <span class="vehicle-value">Mudanzas, Mercancías</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="profile-stats">
                         <div class="stat-item">
                             <div class="stat-value">37</div>
-                            <div class="stat-label">Viajes</div>
+                            <div class="stat-label">Servicios</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value">4.6</div>
@@ -87,75 +118,77 @@
                 </div>
             </section>
 
+            <!-- Viajes Recientes -->
             <section class="recent-trips">
-                <h3 class="trips-title">Viajes Recientes</h3>
+                <h3 class="trips-title">Servicios Recientes</h3>
                 <div class="trip-list">
                     <div class="trip-item">
-                        <div class="trip-icon">🚖</div>
+                        <div class="trip-icon">🚚</div>
                         <div class="trip-details">
-                            <div class="trip-date">Hoy, 14:30</div>
-                            <div class="trip-route">Parque Central → Mercado Municipal</div>
+                            <div class="trip-date">Hoy, 10:30</div>
+                            <div class="trip-route">Colonia Centro → Zona Industrial</div>
                             <div class="trip-status">Completado</div>
                         </div>
                     </div>
 
                     <div class="trip-item">
-                        <div class="trip-icon">🚖</div>
+                        <div class="trip-icon">🚚</div>
                         <div class="trip-details">
-                            <div class="trip-date">Ayer, 09:15</div>
-                            <div class="trip-route">Zona #1 → URACCAN CUR Nueva Guinea</div>
+                            <div class="trip-date">Ayer, 14:15</div>
+                            <div class="trip-route">Mercado Municipal → Residencial Los Álamos</div>
                             <div class="trip-status">Completado</div>
                         </div>
                     </div>
 
                     <div class="trip-item">
-                        <div class="trip-icon">🚖</div>
+                        <div class="trip-icon">🚚</div>
                         <div class="trip-details">
-                            <div class="trip-date">2 nov, 18:45</div>
-                            <div class="trip-route">Zona #4 → Hospital Regional</div>
+                            <div class="trip-date">3 nov, 08:45</div>
+                            <div class="trip-route">Bodega Central → Tiendas Diversas</div>
                             <div class="trip-status">Completado</div>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <!-- Reseñas -->
             <section class="profile-reviews">
                 <h3 class="reviews-title">Reseñas Recibidas</h3>
                 <div class="review-list">
                     <article class="review-item">
                         <div class="review-header">
-                            <img class="client-profile" src="../assets/img/profiles-index/perfil-1-femal.png" alt="Foto Ana L.">
+                            <img class="client-profile" src="../assets/img/profiles-index/perfil-1-male.png" alt="Foto Carlos M.">
                             <div class="reviewer">
-                                <h4>Ana L.</h4>
-                                <p class="review-role">Cliente · <span class="review-date">3 nov</span></p>
+                                <h4>Carlos M.</h4>
+                                <p class="review-role">Cliente · <span class="review-date">2 nov</span></p>
                             </div>
                             <div class="review-rating">★★★★★</div>
-                        </div> 
-                        <p class="review-text">Excelente servicio, muy profesional y puntual. Mi mudanza fue rápida y sin contratiempos.</p>
+                        </div>
+                        <p class="review-text">Excelente servicio de mudanza. Ana fue muy cuidadosa con mis muebles y muy profesional.</p>
                     </article>
 
                     <article class="review-item">
                         <div class="review-header">
-                            <img class="client-profile" src="../assets/img/profiles-index/perfil-2-male.png" alt="Foto José M.">
+                            <img class="client-profile" src="../assets/img/profiles-index/perfil-3-femal.png" alt="Foto Marta R.">
                             <div class="reviewer">
-                                <h4>José M.</h4>
-                                <p class="review-role">Cliente · <span class="review-date">28 oct</span></p>
+                                <h4>Marta R.</h4>
+                                <p class="review-role">Cliente · <span class="review-date">29 oct</span></p>
                             </div>
                             <div class="review-rating">★★★★☆</div>
                         </div>
-                        <p class="review-text">Buen servicio en general, aunque hubo un pequeño retraso. La comunicación fue clara y el trato amable.</p>
+                        <p class="review-text">Buen servicio para transporte de mercancías. Puntual y el vehículo en buen estado.</p>
                     </article>
 
                     <article class="review-item">
                         <div class="review-header">
-                            <img class="client-profile" src="../assets/img/profiles-index/perfil-3-femal.png" alt="Foto Lucía R.">
+                            <img class="client-profile" src="../assets/img/profiles-index/perfil-2-male.png" alt="Foto Roberto T.">
                             <div class="reviewer">
-                                <h4>Lucía R.</h4>
-                                <p class="review-role">Cliente · <span class="review-date">20 oct</span></p>
+                                <h4>Roberto T.</h4>
+                                <p class="review-role">Cliente · <span class="review-date">25 oct</span></p>
                             </div>
                             <div class="review-rating">★★★★★</div>
                         </div>
-                        <p class="review-text">Ana fue increíblemente atenta y cuidadosa con mis pertenencias. La recomiendo totalmente para cualquier acarreo.</p>
+                        <p class="review-text">La mejor conductora de acarreo que he contratado. Muy responsable y cuidadosa con la carga.</p>
                     </article>
                 </div>
 
@@ -163,6 +196,7 @@
                     <a href="#" class="btn">Ver todas las reseñas</a>
                 </div>
             </section>
+        </div>
     </main>
 
     <!-- ⚫ FOOTER -->
@@ -178,6 +212,5 @@
         </ul>
         <p>©Copyright 2025. Todos los derechos reservados.</p>
     </footer>
-
 </body>
 </html>

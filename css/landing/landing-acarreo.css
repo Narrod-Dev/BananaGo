@@ -1,0 +1,222 @@
+        /* Estilos específicos para acarreo */
+        .app-container {
+            margin-top: 60px;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ff6b6b, #ffa726);
+            padding: 1rem;
+        }
+
+        .app-header {
+            text-align: center;
+            padding: 1rem 0 1.5rem;
+            color: white;
+        }
+
+        .app-logo {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 0.5rem;
+            background: white;
+            border-radius: 50%;
+            padding: 5px;
+        }
+
+        .app-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .app-subtitle {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .driver-status {
+            background: rgba(255,255,255,0.15);
+            border-radius: 25px;
+            padding: 0.75rem 1.5rem;
+            margin: 1rem auto;
+            max-width: 300px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .status-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+        }
+
+        .toggle-switch {
+            width: 50px;
+            height: 26px;
+            background: #ccc;
+            border-radius: 25px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .toggle-switch.active {
+            background: #4CAF50;
+        }
+
+        .toggle-slider {
+            width: 22px;
+            height: 22px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            transition: all 0.3s;
+        }
+
+        .toggle-switch.active .toggle-slider {
+            left: 26px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem auto;
+            max-width: 400px;
+        }
+
+        .stat-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 1rem;
+            text-align: center;
+            color: white;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+            margin: 1rem auto;
+            max-width: 400px;
+        }
+
+        .service-tag {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .options-grid {
+            display: grid;
+            gap: 1rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .option-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            text-align: left;
+        }
+
+        .option-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .option-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .option-content {
+            flex: 1;
+        }
+
+        .option-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.25rem;
+        }
+
+        .option-desc {
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        .option-badge {
+            background: #FFD700;
+            color: #333;
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        /* Colores de íconos para acarreo */
+        .icon-solicitudes { background: #ff6b6b; color: white; }
+        .icon-servicio { background: #4CAF50; color: white; }
+        .icon-ganancias { background: #FF9800; color: white; }
+        .icon-perfil { background: #9C27B0; color: white; }
+        .icon-historial { background: #607D8B; color: white; }
+        .icon-vehiculo { background: #795548; color: white; }
+        .icon-ajustes { background: #2196F3; color: white; }
+
+        .driver-info {
+            text-align: center;
+            margin-top: 2rem;
+            color: white;
+        }
+
+        .driver-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid rgba(255,255,255,0.3);
+            margin: 0 auto 0.5rem;
+        }
+
+        .capacity-indicator {
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            padding: 0.5rem 1rem;
+            margin: 1rem auto;
+            max-width: 300px;
+            color: white;
+            font-size: 0.9rem;
+        }

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BananaGo - Pedir Taxi o Acarreo</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/landing/landing-cliente.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../assets/img/bananago-logo.png" alt="Logo BananaGo">
+            <h1><span class="oculto">Home | </span><a href="../index.html">BananaGo</a></h1>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html#usuarios">Regístrate</a></li>
+                <li><a href="../contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <img src="../assets/img/bananago-logo.png" alt="BananaGo" class="app-logo">
+            <h1 class="app-title">BananaGo</h1>
+            <p class="app-subtitle">Te movemos rico y cómodo a cualquier lugar</p>
+        </header>
+
+        <!-- Opciones principales -->
+        <div class="options-grid">
+            <!-- Pedir Taxi -->
+            <button class="option-card taxi-card" onclick="location.href='solicitar-taxi.html'">
+                <div class="option-icon">🚕</div>
+                <h2 class="option-title">Pedir Taxi</h2>
+                <p class="option-desc">Viaja seguro por la ciudad cuando lo necesites</p>
+            </button>
+
+            <!-- Pedir Acarreo -->
+            <button class="option-card acarreo-card" onclick="location.href='solicitar-acarreo.html'">
+                <div class="option-icon">🚚</div>
+                <h2 class="option-title">Pedir Acarreo</h2>
+                <p class="option-desc">Transporta cosas, mudanzas o mercancías</p>
+            </button>
+
+            <!-- Ver Perfil -->
+            <button class="option-card profile-card" onclick="location.href='../profiles/profile-cliente.html'">
+                <div class="option-icon">👤</div>
+                <h2 class="option-title">Mi Perfil</h2>
+                <p class="option-desc">Gestiona tus viajes, pagos y favoritos</p>
+            </button>
+        </div>
+
+        <!-- Acciones rápidas -->
+        <div class="quick-actions">
+            <button class="quick-btn" onclick="location.href='#'">
+                📋 Historial
+            </button>
+            <button class="quick-btn" onclick="location.href='#'">
+                📍 Favoritos
+            </button>
+            <button class="quick-btn" onclick="location.href='#'">
+                💳 Pagos
+            </button>
+            <button class="quick-btn" onclick="location.href='#'">
+                🆘 Ayuda
+            </button>
+        </div>
+
+        <!-- Info usuario -->
+        <div class="user-info">
+            <img src="../assets/img/profiles-index/perfil-1-femal.png" alt="Usuario" class="user-avatar">
+            <div>María G.</div>
+            <div style="font-size: 0.8rem; color: #666;">@maria_g</div>
+        </div>
+    </div>
+
+    <!-- ⚫ FOOTER -->
+    <footer id="contacto" class="footer">
+        <div class="footer-logo">
+            <img src="../assets/img/bananago-logo.png" alt="BananaGo Logo">
+            <p>BananaGo — Te movemos rico y cómodo a cualquier lugar</p>
+        </div>
+        <ul>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Soporte</a></li>
+        </ul>
+        <p>©Copyright 2025. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Efectos simples de interacción
+        document.querySelectorAll('.option-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>
