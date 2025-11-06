@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Acarreo | BananaGo</title>
+    <link rel="icon" href="../assets/img/bananago-logo-1.png" type="image/png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/solicitudes/solicitud.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../assets/img/bananago-logo.png" alt="Logo BananaGo">
+            <h1><span class="oculto">Pedir Acarreo | </span><a href="../index.html">BananaGo</a></h1>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="../landing/landing-cliente.html">Inicio</a></li>
+                <li><a href="../profiles/profile-cliente.html">Perfil</a></li>
+                <li><a href="../contacto.html">Soporte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 class="page-title">Solicitar un Acarreo</h2>
+
+            <div class="solicitud-card">
+                <form class="solicitud-form" aria-label="Formulario de solicitud de acarreo" data-redirect="visualizar_solicitud.html">
+                    <div class="row">
+                        <label for="pickup">Lugar de recogida</label>
+                        <div class="input-with-actions">
+                            <select id="pickup" name="pickup" class="select-location" required>
+                                <option value="">Selecciona lugar</option>
+                                <option value="Almacén Central">Almacén Central</option>
+                                <option value="Fábrica Norte">Fábrica Norte</option>
+                                <option value="Bodega Sur">Bodega Sur</option>
+                            </select>
+                            <button type="button" class="btn use-my-location" title="Usar ubicación">📍</button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="destination">Lugar de entrega</label>
+                        <div class="input-with-actions">
+                            <select id="destination" name="destination" class="select-location" required>
+                                <option value="">Selecciona destino</option>
+                                <option value="Sucursal Centro">Sucursal Centro</option>
+                                <option value="Cliente Final">Cliente Final</option>
+                                <option value="Depósito">Depósito</option>
+                            </select>
+                            <button type="button" class="btn use-my-location" title="Usar ubicación">📍</button>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div>
+                            <label for="item_type">Tipo de objeto</label>
+                            <select id="item_type" name="item_type">
+                                <option value="muebles">Muebles</option>
+                                <option value="electro">Electrodoméstico</option>
+                                <option value="cajas">Cajas</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="weight">Peso aprox. (kg)</label>
+                            <input id="weight" name="weight" type="number" min="1" placeholder="Ej: 30">
+                        </div>
+
+                        <div>
+                            <label for="dimensions">Dimensiones (LxAxH cm)</label>
+                            <input id="dimensions" name="dimensions" type="text" placeholder="Ej: 120x60x80">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="quantity">Cantidad</label>
+                        <select id="quantity" name="quantity">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+
+                    <div class="row checkbox-row">
+                        <label><input type="checkbox" name="fragile"> Frágil</label>
+                        <label><input type="checkbox" name="assembly"> Requiere montaje</label>
+                    </div>
+
+                    <div class="map-row">
+                        <label>Vista previa de mapa</label>
+                        <div class="map-wrap">
+                            <iframe class="map-preview" src="https://www.google.com/maps?q=almac%C3%A9n%20central&z=13&output=embed" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <fieldset class="payment">
+                        <legend>Pago</legend>
+                        <label class="radio"><input type="radio" name="payment_method" value="card" checked> Tarjeta</label>
+                        <label class="radio"><input type="radio" name="payment_method" value="cash"> Efectivo</label>
+
+                        <div class="card-form" style="display:block;">
+                            <label for="card_number">Número de tarjeta</label>
+                            <input id="card_number" name="card_number" type="text" placeholder="1234 5678 9012 3456">
+                            <div class="small-grid">
+                                <div>
+                                    <label for="card_exp">Exp</label>
+                                    <input id="card_exp" name="card_exp" type="text" placeholder="MM/AA">
+                                </div>
+                                <div>
+                                    <label for="card_cvc">CVC</label>
+                                    <input id="card_cvc" name="card_cvc" type="text" placeholder="123">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+                        <a href="../index.html" class="btn btn-ghost">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="../assets/img/bananago-logo.png" alt="BananaGo Logo">
+            <p>BananaGo — Te movemos rico y cómodo a cualquier lugar</p>
+        </div>
+        <ul>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Soporte</a></li>
+        </ul>
+        <p>©Copyright 2025. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/solicitudes.js"></script>
+</body>
+</html>

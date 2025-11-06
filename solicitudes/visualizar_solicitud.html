@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Solicitud | BananaGo</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/solicitudes/solicitud.css">
+    <link rel="stylesheet" href="../css/solicitudes/visualizar-solicitud.css">
+ </head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../assets/img/bananago-logo.png" alt="Logo BananaGo">
+            <h1><span class="oculto">Detalle Solicitud | </span><a href="../index.html">BananaGo</a></h1>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="../landing/landing-cliente.html">Inicio</a></li>
+                <li><a href="../profiles/profile-cliente.html">Perfil</a></li>
+                <li><a href="../contacto.html">Soporte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 class="page-title">Detalle de la Solicitud</h2>
+
+            <div class="detail-grid">
+                <section class="request-info">
+                    <h3>Información de la solicitud</h3>
+                    <dl>
+                        <div class="dl-row"><dt>Origen</dt><dd id="info-origen">Parque Central</dd></div>
+                        <div class="dl-row"><dt>Destino</dt><dd id="info-destino">Mercado Municipal</dd></div>
+                        <div class="dl-row"><dt>Pasajeros</dt><dd id="info-pax">2</dd></div>
+                        <div class="dl-row"><dt>Equipaje</dt><dd id="info-luggage">1 maleta</dd></div>
+                        <div class="dl-row"><dt>Extras</dt><dd id="info-extras">Silla de niño</dd></div>
+                        <div class="dl-row"><dt>Estado</dt><dd id="info-status"><span class="status accepted">Aceptada</span></dd></div>
+                    </dl>
+
+                    <div class="map-wrap small">
+                        <iframe id="detail-map" src="https://www.google.com/maps?q=parque%20central&z=13&output=embed" frameborder="0"></iframe>
+                    </div>
+                </section>
+
+                <aside class="driver-panel">
+                    <div class="driver-card">
+                        <img class="driver-avatar" src="../assets/img/profiles-index/perfil-1-male.png" alt="Foto conductor">
+                        <div class="driver-info">
+                            <h4 class="driver-name">Carlos T.</h4>
+                            <div class="driver-meta">Taxista · <span class="driver-rating">4.9 ★</span></div>
+                            <div class="driver-vehicle">Toyota Corolla · ABC-123</div>
+                        </div>
+                    </div>
+
+                    <div class="driver-actions">
+                        <a href="../profiles/profile-taxista.html" class="btn btn-primary btn-block" id="view-profile">Ver perfil</a>
+                        <button class="btn btn-ghost btn-block" id="start-chat">Chatear con el conductor</button>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="chat-section" aria-hidden="true">
+                <h3>Chat con el conductor</h3>
+                <div class="chat-container">
+                    <div class="messages" id="messages"></div>
+                    <form id="chat-form" class="chat-form">
+                        <input id="chat-input" placeholder="Escribe un mensaje..." autocomplete="off">
+                        <button class="btn btn-primary" type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="../assets/img/bananago-logo.png" alt="BananaGo Logo">
+            <p>BananaGo — Te movemos rico y cómodo a cualquier lugar</p>
+        </div>
+        <ul>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Soporte</a></li>
+        </ul>
+        <p>©Copyright 2025. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/solicitudes.js"></script>
+</body>
+</html>

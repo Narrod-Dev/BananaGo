@@ -6,8 +6,150 @@
     <title>Solicitar Taxi | BananaGo</title>
     <link rel="icon" href="../assets/img/bananago-logo-1.png" type="image/png">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/solicitudes/solicitud.css">
 </head>
 <body>
-    
+    <header class="header">
+        <div class="logo">
+            <img src="../assets/img/bananago-logo.png" alt="Logo BananaGo">
+            <h1><span class="oculto">Pedir Taxi | </span><a href="../index.html">BananaGo</a></h1>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="../landing/landing-cliente.html">Inicio</a></li>
+                <li><a href="../profiles/profile-cliente.html">Perfil</a></li>
+                <li><a href="../contacto.html">Soporte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 class="page-title">Solicitar un Viaje</h2>
+
+            <div class="solicitud-card">
+                <form class="solicitud-form" aria-label="Formulario de solicitud de viaje" data-redirect="visualizar_solicitud.html">
+                    <div class="row">
+                        <label for="pickup">Origen</label>
+                        <div class="input-with-actions">
+                            <select id="pickup" name="pickup" class="select-location" required>
+                                <option value="">Selecciona origen</option>
+                                <option value="Terminal Central">Mercado Central</option>
+                                <option value="Parque Central">Parque Central</option>
+                                <option value="Aeropuerto Internacional">Universidad URACCAN CUR Nueva Guinea</option>
+                                <option value="Policia Nacional">Policia Nacional</option>
+                                <option value="Terminal de Autobuses">Terminal de Autobuses</option>
+                                <option value="Alcaldia Municipal de Nueva Guinea">Alcaldia Municipal de Nueva Guinea</option>
+                                <option value="Hospital Jacinto Hernández">Hospital Jacinto Hernández</option>
+                                <option value="Hospital Regional">Hospital Regional</option>
+                            </select>
+                            <button type="button" class="btn use-my-location" title="Usar ubicación">📍</button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="destination">Destino</label>
+                        <div class="input-with-actions">
+                            <select id="destination" name="destination" class="select-location" required>
+                                <option value="">Selecciona destino</option>
+                                <option value="Terminal Central">Mercado Central</option>
+                                <option value="Parque Central">Parque Central</option>
+                                <option value="Aeropuerto Internacional">Universidad URACCAN CUR Nueva Guinea</option>
+                                <option value="Policia Nacional">Policia Nacional</option>
+                                <option value="Terminal de Autobuses">Terminal de Autobuses</option>
+                                <option value="Alcaldia Municipal de Nueva Guinea">Alcaldia Municipal de Nueva Guinea</option>
+                                <option value="Hospital Jacinto Hernández">Hospital Jacinto Hernández</option>
+                                <option value="Hospital Regional">Hospital Regional</option>
+                            </select>
+                            <button type="button" class="btn use-my-location" title="Usar ubicación">📍</button>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div>
+                            <label for="passengers">Pasajeros</label>
+                            <select id="passengers" name="passengers">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="luggage">Equipaje</label>
+                            <select id="luggage" name="luggage">
+                                <option value="none">Sin equipaje</option>
+                                <option value="1">1 maleta</option>
+                                <option value="2">2 maletas</option>
+                                <option value="3">3 maletas</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="extras">Extras</label>
+                            <select id="extras" name="extras">
+                                <option value="none">Ninguno</option>
+                                <option value="ac">A/C</option>
+                                <option value="child">Silla de niño</option>
+                                <option value="pet">Viajar con mascota</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="map-row">
+                        <label>Vista previa de mapa</label>
+                        <div class="map-wrap">
+                            <iframe class="map-preview" src="https://www.google.com/maps?q=parque%20central&z=13&output=embed" frameborder="0" allowfullscreen aria-hidden="false"></iframe>
+                        </div>
+                    </div>
+
+                    <fieldset class="payment">
+                        <legend>Pago</legend>
+                        <label class="radio"><input type="radio" name="payment_method" value="card" checked> Tarjeta</label>
+                        <label class="radio"><input type="radio" name="payment_method" value="cash"> Efectivo</label>
+
+                        <div class="card-form" style="display:block;">
+                            <label for="card_number">Número de tarjeta</label>
+                            <input id="card_number" name="card_number" type="text" placeholder="1234 5678 9012 3456">
+                            <div class="small-grid">
+                                <div>
+                                    <label for="card_exp">Exp</label>
+                                    <input id="card_exp" name="card_exp" type="text" placeholder="MM/AA">
+                                </div>
+                                <div>
+                                    <label for="card_cvc">CVC</label>
+                                    <input id="card_cvc" name="card_cvc" type="text" placeholder="123">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+                        <a href="../index.html" class="btn btn-ghost">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="../assets/img/bananago-logo.png" alt="BananaGo Logo">
+            <p>BananaGo — Te movemos rico y cómodo a cualquier lugar</p>
+        </div>
+        <ul>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Soporte</a></li>
+        </ul>
+        <p>©Copyright 2025. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/solicitudes.js"></script>
 </body>
 </html>

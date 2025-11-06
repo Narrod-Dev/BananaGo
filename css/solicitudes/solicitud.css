@@ -1,0 +1,62 @@
+/* Solicitud (viaje + acarreo) - estilos compartidos */
+:root{
+	--color-primary: #FFD700;
+	--color-primary-dark: #E6C200;
+	--bg: #ffffff;
+	--muted: #666;
+	--card-bg: #fbfbfb;
+	--radius: 12px;
+}
+
+/* Layout */
+.container{ 
+    margin: 0 auto;
+    margin-top: 100px;
+    max-width: 980px; 
+    padding: 1rem; }
+
+.page-title{ font-size: 1.4rem; color: var(--color-primary-dark); margin-bottom: .8rem; }
+
+.solicitud-card{ background: var(--card-bg); padding: 1rem; border-radius: var(--radius); box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+
+.solicitud-form .row{ display:flex; gap:.6rem; align-items:center; margin-bottom:.75rem; }
+.solicitud-form label{ min-width: 120px; font-weight:600; color:var(--muted); }
+.solicitud-form select, .solicitud-form input[type="text"], .solicitud-form input[type="number"]{ width:100%; padding:.55rem .6rem; border-radius:8px; border:1px solid #e6e6e6; background: #fff; }
+
+.input-with-actions{ display:flex; gap:.5rem; width:100%; }
+.input-with-actions .btn{ flex:0 0 44px; padding:.45rem; border-radius:8px; background:var(--color-primary); color:#222; border:none; cursor:pointer; }
+.input-with-actions .btn.loading{ opacity:.7; }
+
+.form-grid{ display:grid; grid-template-columns: 1fr; gap:.75rem; margin-bottom:.75rem; }
+.form-grid > div{ display:flex; flex-direction:column; }
+
+.small-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:.5rem; }
+
+.map-row{ margin: .75rem 0; }
+.map-wrap{ width:100%; height:220px; border-radius:10px; overflow:hidden; border:1px solid #e9e9e9; }
+.map-preview{ width:100%; height:100%; border:0; }
+
+.payment{ margin-top:.6rem; padding:.6rem; border-radius:8px; background:linear-gradient(180deg, #fff, #fafafa); border:1px solid #eee; }
+.payment .radio{ margin-right: .6rem; }
+.card-form{ margin-top:.6rem; }
+
+.form-actions{ display:flex; gap:.6rem; justify-content:flex-end; margin-top:1rem; }
+.btn{ padding:.5rem .85rem; border-radius:8px; border: none; background: #eee; cursor:pointer; text-decoration:none; color: #222; }
+.btn-ghost{ background: transparent; border:1px solid #ddd; }
+.btn-primary{ background:var(--color-primary); color:#111; font-weight:700; }
+
+.checkbox-row{ display:flex; gap:1rem; align-items:center; }
+
+/* Visual tweaks */
+.select-location{ appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>"); background-repeat:no-repeat; background-position: right 12px center; padding-right: 36px; }
+
+/* Responsive */
+@media(min-width:700px){
+	.form-grid{ grid-template-columns: repeat(3, 1fr); }
+	.solicitud-form .row{ align-items:flex-start; }
+}
+
+@media(min-width:1024px){
+	.map-wrap{ height:320px; }
+}
+
