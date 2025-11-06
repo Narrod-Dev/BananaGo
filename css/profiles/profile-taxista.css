@@ -99,6 +99,7 @@ main {
   font-size: 0.95rem;
 }
 
+
 /* Tarjeta del vehículo */
 .vehicle-card {
   background: var(--color-gray-light);
@@ -140,10 +141,78 @@ main {
   font-weight: 500;
 }
 
+/* === Premios y Reconocimientos (awards) === */
+.awards-section {
+  border-radius: 8px;
+  padding: 1.25rem;
+  background-color: var(--color-background);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.75rem;
+}
+
+.awards-list {
+  display: grid;
+  gap: 1rem;
+  text-align: center;
+}
+
+.award-item {
+  display: grid;
+  place-items: center; /* Centra todo el contenido horizontal y verticalmente */
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid var(--color-gray);
+  background-color: var(--color-gray-light);
+}
+
+.award-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  background-color: var(--color-background);
+  border: 2px solid var(--color-primary);
+}
+
+.reviews-actions {
+  margin-top: .75rem; 
+  text-align: center;
+}
+
+.reviews-actions .btn {
+  background: var(--color-primary);
+  color: var(--color-text);
+  padding: .5rem .9rem;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+}
+
+.award-btn {
+  grid-column: 1 / -1; /* hace que el botón ocupe toda la fila del grid */
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  margin-top: 1rem;
+}
+
+.award-btn .btn {
+  background: var(--color-primary);
+  color: var(--color-text);
+  padding: .5rem .9rem;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+}
+
 /* Stats */
 .profile-stats { 
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   gap: .75rem; 
   margin: 1rem 0; 
   padding: 1rem 0; 
@@ -524,6 +593,11 @@ main {
   
   .review-text { 
     flex: 1; 
+  }
+
+  /* Awards layout on tablet: 3-column grid */
+  .awards-list {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
