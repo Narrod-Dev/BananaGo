@@ -1,0 +1,369 @@
+/* === solicitudes-actuales.css === */
+
+/* --- Estructura general --- */
+main {
+  padding: 2rem 1rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* --- Encabezado de la página --- */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 1rem;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.request-status-badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.status {
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.status.accepted {
+  background-color: #e0ffe0;
+  color: #2e7d32;
+}
+
+.status-time {
+  color: #777;
+  font-size: 0.85rem;
+}
+
+/* --- Tarjetas de información --- */
+.info-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.info-card {
+  flex: 1 1 250px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+  font-size: 2rem;
+}
+
+.card-content h4 {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+}
+
+.fare-amount {
+  font-weight: 700;
+  color: #222;
+  font-size: 1.2rem;
+}
+
+/* --- Sección principal (detalle del viaje + cliente) --- */
+.detail-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.request-info {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.request-info h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.dl-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 0.6rem 0;
+}
+
+.dl-row dt {
+  font-weight: 600;
+  color: #555;
+}
+
+.dl-row dd {
+  margin: 0;
+  color: #333;
+}
+
+/* --- Mapa --- */
+.map-container {
+  margin-top: 1.5rem;
+}
+
+.map-wrap {
+  width: 100%;
+  height: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.map-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* --- Panel del cliente --- */
+.client-panel {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.client-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.client-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.client-info h4 {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.client-meta {
+  font-size: 0.9rem;
+  color: #777;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.client-phone {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* --- Detalles rápidos --- */
+.client-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* --- Botones de acción --- */
+.trip-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.btn {
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-start-trip {
+  background-color: #FFD700;
+  color: #000;
+}
+
+.btn-start-trip:hover {
+  background-color: #f1c40f;
+}
+
+.btn-cancel-trip {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.btn-cancel-trip:hover {
+  background-color: #d32f2f;
+}
+
+/* --- Estadísticas del viaje --- */
+.trip-stats h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  flex: 1 1 100px;
+  background: #f6f6f6;
+  border-radius: 8px;
+  text-align: center;
+  padding: 0.8rem 0.5rem;
+}
+
+.stat-value {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* --- Chat --- */
+.chat-section {
+  display: none;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.chat-container {
+  margin-top: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.msg {
+  max-width: 80%;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  line-height: 1.4;
+}
+
+.msg.me {
+  background: #FFD700;
+  align-self: flex-end;
+}
+
+.msg.they {
+  background: #e0e0e0;
+  align-self: flex-start;
+}
+
+.chat-form {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+.chat-form input {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0 0 0 10px;
+  outline: none;
+}
+
+.chat-form button {
+  background: #FFD700;
+  border: none;
+  padding: 0 1rem;
+  border-radius: 0 0 10px 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* --- Responsividad --- */
+@media (max-width: 992px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .info-cards {
+    flex-direction: column;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .client-avatar {
+    width: 55px;
+    height: 55px;
+  }
+
+  .chat-container {
+    height: 250px;
+  }
+}

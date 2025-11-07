@@ -1,0 +1,293 @@
+/* === SOLICITUDES CONDUCTOR === */
+
+.solicitudes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* === Encabezado === */
+.solicitudes-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.solicitudes-title {
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+    flex: 1;
+}
+
+.filtros-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.filtro-select {
+    padding: 0.6rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+.filtro-select:hover {
+    border-color: #FFD700;
+}
+
+/* === Grid de solicitudes === */
+.solicitudes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+}
+
+/* === Tarjeta === */
+.solicitud-card {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.solicitud-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Prioridad */
+.solicitud-priority {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #FFD700;
+    color: #222;
+    font-weight: bold;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+/* Header interno */
+.solicitud-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tiempo-estimado {
+    font-size: 0.95rem;
+    color: #555;
+    background-color: #f2f2f2;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+}
+
+.tiempo-estimado i {
+    color: #FFD700;
+    margin-right: 4px;
+}
+
+/* Cliente */
+.cliente-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cliente-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #FFD700;
+}
+
+.cliente-detalles {
+    display: flex;
+    flex-direction: column;
+}
+
+.cliente-nombre {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #222;
+}
+
+.cliente-rating i {
+    color: #FFD700;
+}
+
+/* Detalles */
+.solicitud-detalles {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.detalle-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.detalle-icono {
+    font-size: 1.2rem;
+    color: #FFD700;
+}
+
+.detalle-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.detalle-label {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.detalle-valor {
+    font-weight: bold;
+    color: #222;
+}
+
+/* Mapa */
+.mapa-preview small {
+    display: block;
+    text-align: right;
+    margin-top: 0.5rem;
+}
+
+.mapa-preview a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.mapa-preview a:hover {
+    text-decoration: underline;
+}
+
+/* Stats */
+.solicitud-stats {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fafafa;
+    border-radius: 10px;
+    padding: 0.8rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-valor {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #222;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Botones */
+.solicitud-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.action-button {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.action-button i {
+    margin-right: 6px;
+}
+
+/* Aceptar */
+.btn-aceptar {
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-aceptar:hover {
+    background-color: #218838;
+    transform: scale(1.03);
+}
+
+/* Rechazar */
+.btn-rechazar {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-rechazar:hover {
+    background-color: #c82333;
+    transform: scale(1.03);
+}
+
+/* === Responsividad === */
+@media (max-width: 768px) {
+    .solicitudes-header {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .filtros-container {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .solicitud-stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .solicitud-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .solicitudes-title {
+        font-size: 1.5rem;
+    }
+
+    .solicitud-card {
+        padding: 1rem;
+    }
+
+    .cliente-avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    .filtro-select {
+        width: 100%;
+    }
+}

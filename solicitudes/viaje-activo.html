@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalle de Solicitud | BananaGo</title>
+    <link rel="icon" href="../assets/img/bananago-logo-1.png" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/solicitudes/solicitudes-actuales.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="../assets/img/bananago-logo.png" alt="Logo BananaGo" />
+        <h1>
+          <span class="oculto">Detalle Solicitud | </span
+          ><a href="../index.html">BananaGo</a>
+        </h1>
+      </div>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="../landing/landing-taxista.html">Inicio</a></li>
+          <li><a href="../profiles/profile-taxista.html">Perfil</a></li>
+          <li><a href="../contacto.html">Soporte</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="page-header">
+          <h2 class="page-title">Detalle de la Solicitud</h2>
+          <div class="request-status-badge">
+            <span class="status accepted">Aceptada</span>
+            <span class="status-time">Hace 5 min</span>
+          </div>
+        </div>
+
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="card-icon">💰</div>
+            <div class="card-content">
+              <h4>Tarifa estimada</h4>
+              <p class="fare-amount">$15.50</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="card-icon">⏱️</div>
+            <div class="card-content">
+              <h4>Tiempo estimado</h4>
+              <p>25 min</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="card-icon">📏</div>
+            <div class="card-content">
+              <h4>Distancia</h4>
+              <p>8.2 km</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-grid">
+          <section class="request-info">
+            <h3>Información del viaje</h3>
+            <dl>
+              <div class="dl-row">
+                <dt>Origen</dt>
+                <dd id="info-origen">Parque Central</dd>
+              </div>
+              <div class="dl-row">
+                <dt>Destino</dt>
+                <dd id="info-destino">Mercado Municipal</dd>
+              </div>
+              <div class="dl-row">
+                <dt>Pasajeros</dt>
+                <dd id="info-pax">2</dd>
+              </div>
+              <div class="dl-row">
+                <dt>Equipaje</dt>
+                <dd id="info-luggage">1 maleta</dd>
+              </div>
+              <div class="dl-row">
+                <dt>Extras</dt>
+                <dd id="info-extras">Silla de niño</dd>
+              </div>
+              <div class="dl-row">
+                <dt>Método de pago</dt>
+                <dd id="info-payment">Efectivo</dd>
+              </div>
+            </dl>
+
+            <div class="map-container">
+              <h3>Ruta del viaje</h3>
+              <div class="map-wrap">
+                <iframe
+                  id="detail-map"
+                  src="https://www.google.com/maps?q=parque%20central&z=13&output=embed"
+                  frameborder="0"
+                ></iframe>
+              </div>
+            </div>
+          </section>
+
+          <aside class="client-panel">
+            <div class="client-card">
+              <img
+                class="client-avatar"
+                src="../assets/img/profiles-index/perfil-1-femal.png"
+                alt="Foto cliente"
+              />
+              <div class="client-info">
+                <h4 class="client-name">María G.</h4>
+                <div class="client-meta">
+                  <span class="client-rating">4.8 ★</span>
+                  <span class="client-trips">12 viajes</span>
+                </div>
+                <div class="client-phone">📞 +1 234 567 890</div>
+              </div>
+            </div>
+
+            <div class="client-details">
+              <div class="detail-item">
+                <span>📍</span>
+                <span>Recogida: Parque Central</span>
+              </div>
+              <div class="detail-item">
+                <span>🎯</span>
+                <span>Destino: Mercado Municipal</span>
+              </div>
+              <div class="detail-item">
+                <span>👥</span>
+                <span>2 pasajeros</span>
+              </div>
+              <div class="detail-item">
+                <span>🧳</span>
+                <span>1 maleta</span>
+              </div>
+            </div>
+
+            <div class="trip-actions">
+              <button class="btn btn-start-trip" id="start-trip">
+                Iniciar Viaje
+              </button>
+              <button class="btn btn-cancel-trip" id="cancel-trip">
+                Cancelar
+              </button>
+            </div>
+
+            <div class="trip-stats">
+              <h4>Estadísticas del Viaje</h4>
+              <div class="stats-grid">
+                <div class="stat">
+                  <div class="stat-value">8.2 km</div>
+                  <div class="stat-label">Distancia</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-value">25 min</div>
+                  <div class="stat-label">Tiempo</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-value">$15.50</div>
+                  <div class="stat-label">Ganancia</div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="chat-section" aria-hidden="true">
+          <h3>Chat con el cliente</h3>
+          <div class="chat-container">
+            <div class="messages" id="messages"></div>
+            <form id="chat-form" class="chat-form">
+              <input
+                id="chat-input"
+                placeholder="Escribe un mensaje..."
+                autocomplete="off"
+              />
+              <button class="btn btn-primary" type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-logo">
+        <img src="../assets/img/bananago-logo.png" alt="BananaGo Logo" />
+        <p>BananaGo — Te movemos rico y cómodo a cualquier lugar</p>
+      </div>
+      <ul>
+        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Términos de uso</a></li>
+        <li><a href="#">Soporte</a></li>
+      </ul>
+      <p>©Copyright 2025. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/solicitudes-cliente.js"></script>
+    <script>
+      const btnIniciar = document.querySelector(".btn-start-trip");
+      const chatSection = document.querySelector(".chat-section");
+
+      btnIniciar.addEventListener("click", () => {
+        chatSection.style.display = "block";
+        btnIniciar.disabled = true;
+        btnIniciar.textContent = "Viaje en curso 🚗";
+      });
+    </script>
+  </body>
+</html>

@@ -27,6 +27,10 @@
     <main>
         <div class="container">
             <h2 class="page-title">Solicitar un Viaje</h2>
+            <div class="div-actions">
+                <a href="../solicitudes/viaje.html" class="btn-cambio">Solicitud de taxi</a>
+                <a href="../solicitudes/acarreo.html" class="btn-cambio">Solicitud de acarreo</a>
+            </div>
 
             <div class="solicitud-card">
                 <form class="solicitud-form" aria-label="Formulario de solicitud de viaje" data-redirect="visualizar_solicitud.html">
@@ -35,14 +39,14 @@
                         <div class="input-with-actions">
                             <select id="pickup" name="pickup" class="select-location" required>
                                 <option value="">Selecciona origen</option>
-                                <option value="Terminal Central">Mercado Central</option>
-                                <option value="Parque Central">Parque Central</option>
-                                <option value="Aeropuerto Internacional">Universidad URACCAN CUR Nueva Guinea</option>
-                                <option value="Policia Nacional">Policia Nacional</option>
-                                <option value="Terminal de Autobuses">Terminal de Autobuses</option>
+                                <option value="Mercado de Nueva Guinea">Mercado de Nueva Guinea</option>
+                                <option value="Parque Central Nueva Guinea">Parque Central</option>
+                                <option value="URACCAN - IES">Universidad URACCAN CUR Nueva Guinea</option>
+                                <option value="Policía Nacional, Nueva Guinea, Nicaragua">Policia Nacional</option>
+                                <option value="Terminal de Buses Nueva Guinea">Terminal de Buses Nueva Guinea</option>
                                 <option value="Alcaldia Municipal de Nueva Guinea">Alcaldia Municipal de Nueva Guinea</option>
-                                <option value="Hospital Jacinto Hernández">Hospital Jacinto Hernández</option>
-                                <option value="Hospital Regional">Hospital Regional</option>
+                                <option value="Hospital Docente Jacinto Hernández">Hospital Docente Jacinto Hernández</option>
+                                <option value="Hospital Regional de Nueva Guinea">Hospital Regional de Nueva Guinea</option>
                             </select>
                             <button type="button" class="btn use-my-location" title="Usar ubicación">📍</button>
                         </div>
@@ -52,15 +56,15 @@
                         <label for="destination">Destino</label>
                         <div class="input-with-actions">
                             <select id="destination" name="destination" class="select-location" required>
-                                <option value="">Selecciona destino</option>
-                                <option value="Terminal Central">Mercado Central</option>
-                                <option value="Parque Central">Parque Central</option>
-                                <option value="Aeropuerto Internacional">Universidad URACCAN CUR Nueva Guinea</option>
-                                <option value="Policia Nacional">Policia Nacional</option>
-                                <option value="Terminal de Autobuses">Terminal de Autobuses</option>
+                                <option value="">Selecciona origen</option>
+                                <option value="Mercado de Nueva Guinea">Mercado de Nueva Guinea</option>
+                                <option value="Parque Central Nueva Guinea">Parque Central</option>
+                                <option value="URACCAN - IES">Universidad URACCAN CUR Nueva Guinea</option>
+                                <option value="Policía Nacional, Nueva Guinea, Nicaragua">Policia Nacional</option>
+                                <option value="Terminal de Buses Nueva Guinea">Terminal de Buses Nueva Guinea</option>
                                 <option value="Alcaldia Municipal de Nueva Guinea">Alcaldia Municipal de Nueva Guinea</option>
-                                <option value="Hospital Jacinto Hernández">Hospital Jacinto Hernández</option>
-                                <option value="Hospital Regional">Hospital Regional</option>
+                                <option value="Hospital Docente Jacinto Hernández">Hospital Docente Jacinto Hernández</option>
+                                <option value="Hospital Regional de Nueva Guinea">Hospital Regional de Nueva Guinea</option>
                             </select>
                             <button type="button" class="btn use-my-location" title="Usar ubicación">📍</button>
                         </div>
@@ -130,11 +134,10 @@
 
                     <div class="form-actions">
                         <button type="submit" class="btn btn-primary">Enviar solicitud</button>
-                        <a href="../index.html" class="btn btn-ghost">Cancelar</a>
+                        <a href="../landing/landing-cliente.html" class="btn btn-ghost">Cancelar</a>
                     </div>
                 </form>
             </div>
-
     </main>
 
     <footer class="footer">

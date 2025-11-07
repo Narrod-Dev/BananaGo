@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitudes Disponibles | BananaGo Acarreo</title>
+    <link rel="icon" href="../assets/img/bananago-logo-1.png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/solicitudes/solicitudes-conductor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../assets/img/bananago-logo.png" alt="Logo BananaGo">
+            <h1><span class="oculto">Portal Acarreo | </span><a href="../index.html">BananaGo</a></h1>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="../landing/landing-acarreo.html">Inicio</a></li>
+                <li><a href="../profiles/profile-acarreo.html">Mi Perfil</a></li>
+                <li><a href="../contacto.html">Soporte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="solicitudes-container">
+        <div class="solicitudes-header">
+            <h2 class="solicitudes-title">Solicitudes de Acarreo Disponibles</h2>
+            <div class="filtros-container">
+                <select class="filtro-select">
+                    <option value="todos">Todos los servicios</option>
+                    <option value="mudanza">Mudanzas</option>
+                    <option value="carga">Carga pesada</option>
+                    <option value="materiales">Materiales</option>
+                </select>
+                <select class="filtro-select">
+                    <option value="5km">5 km</option>
+                    <option value="10km">10 km</option>
+                    <option value="15km">15 km</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="solicitudes-grid">
+            <!-- Solicitud 1 -->
+            <article class="solicitud-card">
+                <span class="solicitud-priority">Urgente</span>
+                <div class="solicitud-header">
+                    <span class="tiempo-estimado">
+                        <i class="fas fa-clock"></i> 15 min
+                    </span>
+                </div>
+
+                <div class="cliente-info">
+                    <img src="../assets/img/profiles-index/perfil-2-male.png" alt="Foto de cliente" class="cliente-avatar">
+                    <div class="cliente-detalles">
+                        <div class="cliente-nombre">Roberto Silva</div>
+                        <div class="cliente-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            (5.0)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solicitud-detalles">
+                    <div class="detalle-item">
+                        <i class="fas fa-box detalle-icono"></i>
+                        <div class="detalle-info">
+                            <div class="detalle-label">Tipo de carga</div>
+                            <div class="detalle-valor">Mudanza completa</div>
+                        </div>
+                    </div>
+                    <div class="detalle-item">
+                        <i class="fas fa-weight-hanging detalle-icono"></i>
+                        <div class="detalle-info">
+                            <div class="detalle-label">Peso estimado</div>
+                            <div class="detalle-valor">500 kg</div>
+                        </div>
+                    </div>
+                    <div class="detalle-item">
+                        <i class="fas fa-map-marker-alt detalle-icono"></i>
+                        <div class="detalle-info">
+                            <div class="detalle-label">Origen</div>
+                            <div class="detalle-valor">Av. América y Mariana de Jesús</div>
+                        </div>
+                    </div>
+                    <div class="detalle-item">
+                        <i class="fas fa-location-dot detalle-icono"></i>
+                        <div class="detalle-info">
+                            <div class="detalle-label">Destino</div>
+                            <div class="detalle-valor">Sector El Condado</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mapa-preview">
+                    <!-- Aquí iría el mapa con la ruta -->
+                    <div id="mapa" class="mapa-embed" style="width:100%;height:220px;border-radius:8px;overflow:hidden">
+                        <iframe
+                            width="100%"
+                            height="100%"
+                            frameborder="0"
+                            scrolling="no"
+                            marginheight="0"
+                            marginwidth="0"
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=-78.5%2C-0.22%2C-78.43%2C-0.14&layer=mapnik&marker=-0.180653%2C-78.467838"
+                            aria-label="Mapa de ruta (vista previa)">
+                        </iframe>
+                    </div>
+                    <small><a href="https://www.openstreetmap.org/?mlat=-0.180653&mlon=-78.467838#map=13/-0.1807/-78.4678" target="_blank" rel="noopener">Abrir mapa en OpenStreetMap</a></small>
+                </div>
+
+                <div class="solicitud-stats">
+                    <div class="stat-item">
+                        <div class="stat-valor">$45.00</div>
+                        <div class="stat-label">Tarifa</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-valor">8.5 km</div>
+                        <div class="stat-label">Distancia</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-valor">2 hrs</div>
+                        <div class="stat-label">Tiempo est.</div>
+                    </div>
+                </div>
+
+                <div class="solicitud-actions">
+                    <a href="viaje-activo.html" class="action-button btn-aceptar">
+                        <i class="fas fa-check"></i> Aceptar
+                    </a>
+                    <button class="action-button btn-contactar">
+                        <i class="fas fa-phone"></i> Contactar
+                    </button>
+                    <button class="action-button btn-rechazar">
+                        <i class="fas fa-times"></i> Rechazar
+                    </button>
+                </div>
+            </article>
+
+            <!-- Solicitud 2 -->
+            <article class="solicitud-card">
+                <div class="solicitud-header">
+                    <span class="tiempo-estimado">
+                        <i class="fas fa-clock"></i> 20 min
+                    </span>
+                </div>
+
+                <div class="cliente-info">
+                    <img src="../assets/img/profiles-index/perfil-3-femal.png" alt="Foto de cliente" class="cliente-avatar">
+                    <div class="cliente-detalles">
+                        <div class="cliente-nombre">Ana Martínez</div>
+                        <div class="cliente-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            (4.0)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solicitud-detalles">
+                    <div class="detalle-item">
+                        <i class="fas fa-box detalle-icono"></i>
+                        <div class="detalle-info">
+                            <div class="detalle-label">Tipo de carga</div>
+                            <div class="detalle-valor">Materiales de construcción</div>
+                        </div>
+                    </div>
+                    <div class="detalle-item">
+                        <i class="fas fa-weight-hanging detalle-icono"></i>
+                        <div class="detalle-info">
+                            <div class="detalle-label">Peso estimado</div>
+                            <div class="detalle-valor">800 kg</div>
+                        </div>
+                    </div>
+                    <div class="detalle-item">
+                        <i class="fas fa-map-marker-alt detalle-icono"></i>
+                        <div class="detalle-info">
+                            <div class="detalle-label">Origen</div>
+                            <div class="detalle-valor">Kywi Carcelén</div>
+                        </div>
+                    </div>
+                    <div class="detalle-item">
+                        <i class="fas fa-location-dot detalle-icono"></i>
+                        <div class="detalle-info">
+                            <div class="detalle-label">Destino</div>
+                            <div class="detalle-valor">Obra Calderón</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mapa-preview">
+                    <!-- Aquí iría el mapa con la ruta -->
+                    <div id="mapa" class="mapa-embed" style="width:100%;height:220px;border-radius:8px;overflow:hidden">
+                        <iframe
+                            width="100%"
+                            height="100%"
+                            frameborder="0"
+                            scrolling="no"
+                            marginheight="0"
+                            marginwidth="0"
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=-78.5%2C-0.22%2C-78.43%2C-0.14&layer=mapnik&marker=-0.180653%2C-78.467838"
+                            aria-label="Mapa de ruta (vista previa)">
+                        </iframe>
+                    </div>
+                    <small><a href="https://www.openstreetmap.org/?mlat=-0.180653&mlon=-78.467838#map=13/-0.1807/-78.4678" target="_blank" rel="noopener">Abrir mapa en OpenStreetMap</a></small>
+                </div>
+
+                <div class="solicitud-stats">
+                    <div class="stat-item">
+                        <div class="stat-valor">$35.50</div>
+                        <div class="stat-label">Tarifa</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-valor">12.3 km</div>
+                        <div class="stat-label">Distancia</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-valor">1.5 hrs</div>
+                        <div class="stat-label">Tiempo est.</div>
+                    </div>
+                </div>
+
+                <div class="solicitud-actions">
+                    <a href="viaje-activo.html" class="action-button btn-aceptar">
+                        <i class="fas fa-check"></i> Aceptar
+                    </a>
+                    <button class="action-button btn-contactar">
+                        <i class="fas fa-phone"></i> Contactar
+                    </button>
+                    <button class="action-button btn-rechazar">
+                        <i class="fas fa-times"></i> Rechazar
+                    </button>
+                </div>
+            </article>
+
+            <!-- solicitud 3 -->
+            <article class="solicitud-card">
+                <div class="solicitud-header">
+                    <span class="tiempo-estimado">
+                        <i class="fas fa-clock"></i> 20 min
+                    </span>
+                </div>
+
+                <div class="cliente-info">
+                    <img src="../assets/img/profiles-index/perfil-3-femal.png" alt="Foto de cliente" class="cliente-avatar">
+                    <div class="cliente-detalles">
+                        <div class="cliente-nombre">Ana Martínez</div>
+                        <div class="cliente-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            (4.0)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solicitud-detalles">
+                    <div class="detalle-item">
+                        <i class="fas fa-box detalle-icono"></i>
+                        <div class="detalle-info">
+                            <div class="detalle-label">Tipo de carga</div>
+                            <div class="detalle-valor">Materiales de construcción</div>
+                        </div>
+                    </div>
+                    <div class="detalle-item">
+                        <i class="fas fa-weight-hanging detalle-icono"></i>
+                        <div class="detalle-info">
+                            <div class="detalle-label">Peso estimado</div>
+                            <div class="detalle-valor">800 kg</div>
+                        </div>
+                    </div>
+                    <div class="detalle-item">
+                        <i class="fas fa-map-marker-alt detalle-icono"></i>
+                        <div class="detalle-info">
+                            <div class="detalle-label">Origen</div>
+                            <div class="detalle-valor">Kywi Carcelén</div>
+                        </div>
+                    </div>
+                    <div class="detalle-item">
+                        <i class="fas fa-location-dot detalle-icono"></i>
+                        <div class="detalle-info">
+                            <div class="detalle-label">Destino</div>
+                            <div class="detalle-valor">Obra Calderón</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mapa-preview">
+                    <!-- Aquí iría el mapa con la ruta -->
+                    <div id="mapa" class="mapa-embed" style="width:100%;height:220px;border-radius:8px;overflow:hidden">
+                        <iframe
+                            width="100%"
+                            height="100%"
+                            frameborder="0"
+                            scrolling="no"
+                            marginheight="0"
+                            marginwidth="0"
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=-78.5%2C-0.22%2C-78.43%2C-0.14&layer=mapnik&marker=-0.180653%2C-78.467838"
+                            aria-label="Mapa de ruta (vista previa)">
+                        </iframe>
+                    </div>
+                    <small><a href="https://www.openstreetmap.org/?mlat=-0.180653&mlon=-78.467838#map=13/-0.1807/-78.4678" target="_blank" rel="noopener">Abrir mapa en OpenStreetMap</a></small>
+                </div>
+
+                <div class="solicitud-stats">
+                    <div class="stat-item">
+                        <div class="stat-valor">$35.50</div>
+                        <div class="stat-label">Tarifa</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-valor">12.3 km</div>
+                        <div class="stat-label">Distancia</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-valor">1.5 hrs</div>
+                        <div class="stat-label">Tiempo est.</div>
+                    </div>
+                </div>
+
+                <div class="solicitud-actions">
+                    <a href="viaje-activo.html" class="action-button btn-aceptar">
+                        <i class="fas fa-check"></i> Aceptar
+                    </a>
+                    <button class="action-button btn-contactar">
+                        <i class="fas fa-phone"></i> Contactar
+                    </button>
+                    <button class="action-button btn-rechazar">
+                        <i class="fas fa-times"></i> Rechazar
+                    </button>
+                </div>
+            </article>
+
+            <!-- solicitud 4-->
+             <article class="solicitud-card">
+                <div class="solicitud-header">
+                    <span class="tiempo-estimado">
+                        <i class="fas fa-clock"></i> 20 min
+                    </span>
+                </div>
+
+                <div class="cliente-info">
+                    <img src="../assets/img/profiles-index/perfil-1-femal.png" alt="Foto de cliente" class="cliente-avatar">
+                    <div class="cliente-detalles">
+                        <div class="cliente-nombre">Maria G.</div>
+                        <div class="cliente-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            (4.0)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solicitud-detalles">
+                    <div class="detalle-item">
+                        <i class="fas fa-box detalle-icono"></i>
+                        <div class="detalle-info">
+                            <div class="detalle-label">Tipo de carga</div>
+                            <div class="detalle-valor">Muebles de hogar</div>
+                        </div>
+                    </div>
+                    <div class="detalle-item">
+                        <i class="fas fa-weight-hanging detalle-icono"></i>
+                        <div class="detalle-info">
+                            <div class="detalle-label">Peso estimado</div>
+                            <div class="detalle-valor">300 kg</div>
+                        </div>
+                    </div>
+                    <div class="detalle-item">
+                        <i class="fas fa-map-marker-alt detalle-icono"></i>
+                        <div class="detalle-info">
+                            <div class="detalle-label">Origen</div>
+                            <div class="detalle-valor">Evanesteria Rosa</div>
+                        </div>
+                    </div>
+                    <div class="detalle-item">
+                        <i class="fas fa-location-dot detalle-icono"></i>
+                        <div class="detalle-info">
+                            <div class="detalle-label">Destino</div>
+                            <div class="detalle-valor">Zona #5</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mapa-preview">
+                    <!-- Aquí iría el mapa con la ruta -->
+                    <div id="mapa" class="mapa-embed" style="width:100%;height:220px;border-radius:8px;overflow:hidden">
+                        <iframe
+                            width="100%"
+                            height="100%"
+                            frameborder="0"
+                            scrolling="no"
+                            marginheight="0"
+                            marginwidth="0"
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=-78.5%2C-0.22%2C-78.43%2C-0.14&layer=mapnik&marker=-0.180653%2C-78.467838"
+                            aria-label="Mapa de ruta (vista previa)">
+                        </iframe>
+                    </div>
+                    <small><a href="https://www.openstreetmap.org/?mlat=-0.180653&mlon=-78.467838#map=13/-0.1807/-78.4678" target="_blank" rel="noopener">Abrir mapa en OpenStreetMap</a></small>
+                </div>
+
+                <div class="solicitud-stats">
+                    <div class="stat-item">
+                        <div class="stat-valor">$35.50</div>
+                        <div class="stat-label">Tarifa</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-valor">12.3 km</div>
+                        <div class="stat-label">Distancia</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-valor">1.5 hrs</div>
+                        <div class="stat-label">Tiempo est.</div>
+                    </div>
+                </div>
+
+                <div class="solicitud-actions">
+                    <a href="viaje-activo.html" class="action-button btn-aceptar">
+                        <i class="fas fa-check"></i> Aceptar
+                    </a>
+                    <button class="action-button btn-contactar">
+                        <i class="fas fa-phone"></i> Contactar
+                    </button>
+                    <button class="action-button btn-rechazar">
+                        <i class="fas fa-times"></i> Rechazar
+                    </button>
+                </div>
+            </article>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="../assets/img/bananago-logo.png" alt="BananaGo Logo">
+            <p>BananaGo — Te movemos rico y cómodo a cualquier lugar</p>
+        </div>
+        <ul>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Soporte</a></li>
+        </ul>
+        <p>©Copyright 2025. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
